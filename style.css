@@ -1,0 +1,60 @@
+/* Sidebar (always vertical) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px; /* fixed width */
+  height: 100%;
+  background: #222;
+  padding-top: 20px;
+}
+
+.sidebar h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ddd;
+  padding: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #be0da7;
+  color: #fff;
+}
+
+/* Content area */
+.content {
+  margin-left: 220px; /* leave space for sidebar */
+  padding: 20px;
+  min-height: 100vh;
+  background: #f4f4f4;
+}
+
+/* Home background */
+.home {
+  background: url("homepage.jpg") no-repeat center center/cover;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+p{
+    font-size: clamp(16px, 3vw, 30px);
+    line-height: 1.6;
+    color: #eeea09;
+}
+
+/* Responsive: make sidebar smaller on very small screens */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px; /* reduce width for small phones */
+  }
+  .content {
+    margin-left: 150px;
+  }
+}
